@@ -13,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thiendangit/react-native-thermal-receipt-printer-image-qr"
+    "url": "https://github.com/anxhirr/pos-rn-printer"
   },
   "files": [
     "dist",
     "android",
     "ios",
-    "react-native-thermal-receipt-printer-image-qr.podspec"
+    "pos-rn-printer.podspec"
   ],
   "keywords": [
     "react-native",
@@ -58,7 +58,7 @@
   "peerDependencies": {
     "react-native-ping": "*"
   },
-  "author": "thiendangit",
-  "homepage": "https://github.com/thiendangit/react-native-thermal-receipt-printer-image-qr#readme",
+  "author": "anxhirr",
+  "homepage": "https://github.com/anxhirr/pos-rn-printer#readme",
   "license": "ISC"
 }

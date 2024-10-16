@@ -1,33 +1,33 @@
 /* eslint-disable react-native/no-inline-styles */
 import {Picker} from '@react-native-picker/picker';
-import * as React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Platform,
-  Alert,
-  TouchableOpacity,
-  Dimensions,
-  TextInput,
-} from 'react-native';
+import {Buffer} from 'buffer';
 import {
   BLEPrinter,
-  NetPrinter,
-  USBPrinter,
-  IUSBPrinter,
-  IBLEPrinter,
-  INetPrinter,
   ColumnAlignment,
   COMMANDS,
-} from 'react-native-thermal-receipt-printer-image-qr';
-import Loading from '../Loading';
-import {DeviceType} from './FindPrinter';
-import {navigate} from './App';
-import AntIcon from 'react-native-vector-icons/AntDesign';
-import QRCode from 'react-native-qrcode-svg';
+  IBLEPrinter,
+  INetPrinter,
+  IUSBPrinter,
+  NetPrinter,
+  USBPrinter,
+} from 'pos-rn-printer';
+import * as React from 'react';
 import {useRef} from 'react';
-import {Buffer} from 'buffer';
+import {
+  Alert,
+  Dimensions,
+  Platform,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import QRCode from 'react-native-qrcode-svg';
+import AntIcon from 'react-native-vector-icons/AntDesign';
+import Loading from '../Loading';
+import {navigate} from './App';
+import {DeviceType} from './FindPrinter';
 
 const printerList: Record<string, any> = {
   ble: BLEPrinter,

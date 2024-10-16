@@ -1,15 +1,10 @@
-import React from 'react';
 import {
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  Text,
-} from 'react-native';
-import {
+  NetPrinter,
   NetPrinterEventEmitter,
   RN_THERMAL_RECEIPT_PRINTER_EVENTS,
-  NetPrinter,
-} from 'react-native-thermal-receipt-printer-image-qr';
+} from 'pos-rn-printer';
+import React from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Loading from '../Loading';
 import {navigate} from './App';
 
@@ -62,18 +57,18 @@ export const FindPrinter = () => {
   };
 
   return (
-    <View style={styles.container} >
+    <View style={styles.container}>
       {devices !== undefined &&
-      devices?.length > 0 &&
-      devices?.map((item: any, index) => {
-        const onPress = () => onSelectedPrinter(item);
-        return (
-          <TouchableOpacity key={`printer-item-${index}`} onPress={onPress} >
-            <Text >{item.host}</Text >
-          </TouchableOpacity >
-        );
-      })}
-    </View >
+        devices?.length > 0 &&
+        devices?.map((item: any, index) => {
+          const onPress = () => onSelectedPrinter(item);
+          return (
+            <TouchableOpacity key={`printer-item-${index}`} onPress={onPress}>
+              <Text>{item.host}</Text>
+            </TouchableOpacity>
+          );
+        })}
+    </View>
   );
 };
 
