@@ -121,7 +121,7 @@ RCT_EXPORT_METHOD(printImageData:(NSString *)imgUrl
 
         NSString* printerWidthType = [options valueForKey:@"printerWidthType"];
 
-        NSInteger printerWidth = 576;
+        NSInteger printerWidth = 384;
 
         if(printerWidthType != nil && [printerWidthType isEqualToString:@"58"]) {
             printerWidth = 384;
